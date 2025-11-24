@@ -6,3 +6,7 @@
 .offer__slide_hidden{
     display: none;
 }
+
+.overflow__forbiden{
+    overflow: hidden;
+}
