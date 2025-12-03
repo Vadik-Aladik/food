@@ -1,8 +1,13 @@
 <?php 
 
-    // echo '<pre>';
-    var_dump(json_decode($_POST));
-    var_dump(json_decode($_REQUEST));
-    // echo '</pre>';
+    // $input = file_get_contents("php://input");
+    // $data = json_decode($input);
+
+    header("Content-Type: application/json");
+
+    echo json_encode([
+        'status' => '200',
+        'body' => $_POST
+    ]);
 
 ?>

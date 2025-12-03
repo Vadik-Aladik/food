@@ -268,13 +268,13 @@ window.addEventListener('DOMContentLoaded', ()=>{
                 const form = new FormData(elem);
                 fetch('http://localhost/dist/server.php', {
                     method: 'POST',
-                    headers:{
-                        'Content-Type': 'multipart/form-data'
-                    },
                     body: form,
-                }).then(res => {
-                    console.log(res);
-                }).catch(err => {
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Ответ сервера:", data);
+                })
+                .catch(err => {
                     console.log(err);
                 });
             }
